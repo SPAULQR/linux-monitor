@@ -1,0 +1,1 @@
+Linux 5.3.0-42-generic (Moscow) 	23.05.2020 	_x86_64_	(8 CPU)

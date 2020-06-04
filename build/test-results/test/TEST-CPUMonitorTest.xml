@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CPUMonitorTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-06-04T16:01:51" hostname="Moscow" time="0.026">
+  <properties/>
+  <testcase name="testCpuMonitorFirstLine()" classname="CPUMonitorTest" time="0.014"/>
+  <testcase name="insufficientDataListTesting()" classname="CPUMonitorTest" time="0.003"/>
+  <testcase name="testCpuMonitorNotNull()" classname="CPUMonitorTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Required list size must be at least 4
+]]></system-err>
+</testsuite>
