@@ -1,3 +1,5 @@
+package readerBuilders;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import readerbuilders.FileReaderBuilder;
@@ -31,7 +33,7 @@ public class ReaderBuildersTest {
     @Test
     public void fileReaderBuilderTest() throws IOException {
         builder = new FileReaderBuilder();
-        reader = builder.getNewBufferedReader("src/test/resources/cpu test data.txt");
+        reader = builder.getNewBufferedReader("src/test/resources/cpu_test_data.txt");
         firstLine = reader.readLine();
         Assertions.assertTrue(firstLine.contains("Linux"));
     }

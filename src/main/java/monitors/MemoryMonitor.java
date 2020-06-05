@@ -1,6 +1,6 @@
 package monitors;
 
-import Exceptions.NotEnoughListSizeException;
+import exceptions.NotEnoughListSizeException;
 
 import java.util.List;
 
