@@ -1,24 +1,25 @@
 package monitors;
 
 import exceptions.NotEnoughListSizeException;
+import parser.IBufferedReaderParser;
 
-import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 public class FileSystemMonitor implements IFileSystemMonitor {
-    private final List<String> dataList;
+    IBufferedReaderParser parser;
     private final int requiredListSize = 2;
 
-    public FileSystemMonitor(List<String> dataList) {
-        this.dataList = dataList;
+    public FileSystemMonitor(IBufferedReaderParser parser) {
+        this.parser = parser;
     }
 
     public Map<String, String> getFileSystemUsage() throws NotEnoughListSizeException {
-        if (dataList.size() < requiredListSize)
+        if (parser.getSystemData().size() < requiredListSize)
             throw new NotEnoughListSizeException(requiredListSize);
 
-        return dataList.stream()
+        return parser.getSystemData()
+                .stream()
                 .skip(1)
                 .collect(Collectors
                         .toMap(key -> key.split("\\s+")[0],
